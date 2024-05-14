@@ -1,0 +1,25 @@
+<p>student-list works!</p>
+<h2>Student Table</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>group</th>
+            <th>age</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.grp}}</td>
+            <td>{{student.age}}</td>
+            <td>
+                <button (click)="updateStudent(student.id)" class="button btn-primary">Update</button>
+                <button (click)="deleteStudent(student.id)" class="button btn-danger" style="margin-left: 10px;">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
